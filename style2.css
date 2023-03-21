@@ -161,4 +161,41 @@ body {
     .explore_menu_text {
         font-size: 48px;
     }
- }
+}
+
+
+.animation {
+    width: 100px;
+    height: 100px;
+    margin: 100px auto;
+    background-color: red;
+    transition-property: all;
+    transition-delay: 0.2s;
+    transition-duration: 0.5s;
+}
+.animation:hover {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-color: green;
+    transform: rotate(360deg);
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    border:1px solid black;
+    animation: 5s xyz infinite;
+    animation-delay: 2s;
+}
+
+@keyframes xyz {
+    50% {
+        background-color: red;
+        margin-left: 500px;
+        transform:rotate(360deg)
+    }
+    100% {
+        background-color: black;
+    }
+}
