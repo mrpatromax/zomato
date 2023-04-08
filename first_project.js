@@ -141,3 +141,71 @@ var num1=0;
 do{
     console.log("hey");
 }while(num1>0);
+
+
+
+
+
+//functions
+
+const item ={
+    food: 1000,
+    drinks:200,
+};
+cart=0
+var addtocart =(item)=>{
+   return cart+item;
+}
+var addcartvalue=(item)=>{
+    cart=addtocart(item);
+}
+addcartvalue(item.food);
+addcartvalue(item.drinks)
+console.log("cart: ",cart);
+
+// key words
+//this
+console.log(this)
+function getthis(){
+    console.log(this);
+}
+getthis();
+const arrowgetthis=()=>{
+    console.log(this);
+}
+arrowgetthis();
+
+const ourobject = {
+    name: "this keyword",
+    getthis : ()=>{
+        console.log(this);
+    }
+};
+ourobject.getthis();
+
+//arrays
+var myarray =[1,2,3,4,5,6,7];
+console.log(myarray);
+myarray.push(8);
+console.log(myarray);
+myarray.pop();
+console.log(myarray);
+myarray.unshift(0);// add something in the first position 
+console.log(myarray);
+myarray.shift();// remove something from the  first position
+console.log(myarray);
+
+//
+var number=1;
+function printnum(){
+    console.log(number);
+    number++;
+    if(number<=10) {
+        printnum();
+    }
+    else {
+        console.log("hello");//it will print coz before return or after return it will not
+        return;
+    }
+}
+printnum();
