@@ -209,3 +209,86 @@ function printnum(){
     }
 }
 printnum();
+
+
+//
+
+function getarray(){
+    return [1,2];
+}
+const [x,y,z]=getarray();
+console.log(x);
+console.log(y);
+console.log(z);
+
+
+//map and filter
+// map
+var MyArray = [1,2,3];
+const newarray =MyArray.map((e) => (e+1));
+console.log(newarray);
+console.log(MyArray);
+
+
+//filter
+
+var abc =[10,20,50];
+const array1 = abc.filter(
+    e => e<50
+);
+console.log(array1)
+console.log(abc)
+
+
+//es 6
+//world is printed coz even if the name is not passed the default is ready so no need of loops
+
+
+function hello(name="world") { 
+    console.log("hello "+ name);
+}
+hello("vansh");
+
+//es 6 another feature
+//tamplate literals
+
+console.log("apple\nbanana\ngrapes")
+console.log(
+    `
+apple
+bananan
+grapes
+    `)
+// scoping
+function outer(){
+    var name1="xyz";
+    let name2="pqr"; // same for let
+
+    function inner(){
+        var name1="xxyyzz";
+        console.log(name1)
+    }
+    inner()
+    console.log(name1);
+}
+outer()
+
+//a synchronous js
+//promises
+// async await
+
+//promises
+fetch("https://jsonplaceholder.typicode.com/users")
+.then((result)  => result.json())
+.then((data)=> console.log(data));
+
+console.log("---------------");
+
+
+const getdata =async () => {
+    const result = await fetch ("https://jsonplaceholder.typicode.com/users");
+    const data = await result.json();
+    console.log(data);
+};
+getdata();
+
